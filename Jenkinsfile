@@ -1,6 +1,7 @@
-node ('linux'){
-  stage 'Build and Test'
-  env.PATH = "${tool 'Maven 3'}/bin:${env.PATH}"
-  checkout scm
-  sh 'mvn clean package'
+
+stage 'Dev'
+node('docker-cloud') {
+    checkout scm
+    // mvn '-o clean package'
+    // archive 'target/x.war'
 }
