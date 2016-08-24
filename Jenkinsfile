@@ -1,6 +1,6 @@
 
 stage 'Dev'
-node('docker-cloud') {
+node {
     checkout scm
     mvn 'clean package'
     // mvn '-o clean package'
